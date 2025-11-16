@@ -1,0 +1,551 @@
+/* =====================================================
+   ESTILOS GLOBALES - PÁGINA PRINCIPAL (index.html)
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fffaf5;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-left: 2rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.titulo-header {
+    text-align: left;
+}
+
+.titulo-header h1 {
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+}
+
+.titulo-header p {
+    font-size: 1.1rem;
+    color: #ffe082;
+    margin: 0;
+}
+
+/* ===== MENÚ ===== */
+nav {
+    background-color: #b71c1c;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0.8rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav a:hover, nav a.activo {
+    background-color: #d32f2f;
+    color: #ffe082;
+}
+
+/* ===== CARRUSEL ===== */
+#carrusel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 1rem;
+}
+
+#carrusel img {
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+
+/* ===== INTRODUCCIÓN ===== */
+#introduccion {
+    text-align: center;
+    padding: 2rem;
+}
+
+#introduccion h2 {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+}
+
+/* ===== CONTENIDO PRINCIPAL (index.html) ===== */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#recetas-destacadas {
+    flex: 3;
+    background-color: #fff;
+}
+
+/* ===== TARJETAS ===== */
+.grid-recetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta {
+    background: #fffaf5;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.tarjeta h3 {
+    color: #d32f2f;
+    margin: 0.5rem 0;
+}
+
+.tarjeta p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== BOTONES ===== */
+.boton, .btn {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.boton:hover, .btn:hover {
+    background-color: #9a0007;
+}
+
+/* ===== ASIDE ===== */
+aside {
+    flex: 1;
+    background-color: #ffd6c2;
+    padding: 1rem;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+aside h3 {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #b71c1c;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ffe082;
+    text-decoration: none;
+    margin: 0 4px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   ESTILOS ESPECÍFICOS - PÁGINA DE RECETAS (recetas.html)
+   ===================================================== */
+
+.page-recetas main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.page-recetas .receta {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.page-recetas .receta:hover {
+    transform: translateY(-5px);
+}
+
+.page-recetas .receta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.page-recetas .receta-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-recetas .receta-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #d32f2f;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.page-recetas .receta-content p {
+    flex-grow: 1;
+    color: #333;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.page-recetas .receta-content .btn {
+    display: inline-block;
+    text-align: center;
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.page-recetas .receta-content .btn:hover {
+    background-color: #9a0007;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #carrusel img {
+        height: 400px;
+    }
+
+    .tarjeta img {
+        height: 200px;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .grid-recetas-pagina {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================================
+   ESTILOS - RECETA DETALLE (receta-ceviche.html)
+   ===================================================== */
+
+.receta-detalle {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.receta-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.receta-img-principal {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.receta-info {
+    flex: 1;
+}
+
+.receta-info h2 {
+    color: #d32f2f;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.receta-info p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.galeria {
+    margin-top: 2rem;
+}
+
+.galeria h3 {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+}
+
+.carrusel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.carrusel img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+.carrusel img:hover {
+    transform: scale(1.05);
+}
+
+.receta-video {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.receta-video video {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.receta-ingredientes, .receta-preparacion {
+    margin-top: 2rem;
+}
+
+.receta-ingredientes h3, .receta-preparacion h3 {
+    color: #d32f2f;
+    margin-bottom: 0.8rem;
+}
+
+.receta-ingredientes ul, .receta-preparacion ol {
+    margin-left: 1.5rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+.volver-recetas {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #9a0007;
+}
+
+/* =====================================================
+   GALERÍA CON DESCRIPCIÓN INTERACTIVA
+   ===================================================== */
+
+.carrusel {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+}
+
+.imagen-carrusel {
+    position: relative;
+    scroll-snap-align: center;
+}
+
+.imagen-carrusel img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Texto que aparece al pasar el cursor */
+.descripcion-imagen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.imagen-carrusel:hover .descripcion-imagen {
+    opacity: 1;
+}
+
+.imagen-carrusel:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+/* =====================================================
+   VIDEO DE YOUTUBE RESPONSIVO
+   ===================================================== */
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =====================================================
+   DETALLES DE PRESENTACIÓN EXTRA
+   ===================================================== */
+
+/* Sombra suave al pasar por la tarjeta principal */
+.receta-hero:hover .receta-img-principal {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Título y separadores */
+.receta-detalle h3 {
+    border-bottom: 3px solid #ffe082;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+/* Mejora el botón "Volver a Recetas" */
+.btn-volver {
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    font-size: 1rem;
+}
+
+.btn-volver:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
