@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Criollo - Recetas Peruanas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="img/logo.png" alt="Logo Sabor Criollo" class="logo">
+        <div class="titulo-header">
+            <h1>Sabor Criollo</h1>
+            <p>Sabores peruanos que conquistan el corazón</p>
+        </div>
+    </div>
+</header>
+
+
+
+    <!-- Menú de Navegación -->
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="recetas.html">Recetas</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Sección de Contacto -->
+
+    <section class="contacto" id="contacto">
+        <div class="contenedor-contacto">
+            <h2>¡Queremos saber de ti!</h2>
+            <p class="intro-contacto">¿Cocinaste algo delicioso? ¿Tienes una receta secreta de la abuela? Escríbenos o mándanos una foto.</p>
+            
+            <form action="#" method="post" enctype="multipart/form-data" class="formulario-criollo">
+                
+                <div class="grupo-input">
+                    <label for="nombre">Tu Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="juan@ejemplo.com" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="motivo">¿Cuál es el motivo?</label>
+                    <select id="motivo" name="motivo">
+                        <option value="consulta">Tengo una consulta</option>
+                        <option value="colaboracion">Quiero enviar mi receta</option>
+                        <option value="foto">¡Mira cómo me quedó tu plato!</option>
+                        <option value="negocio">Propuesta comercial</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input archivo">
+                    <label for="archivo">Sube tu foto o receta (Opcional)</label>
+                    <div class="input-archivo-wrapper">
+                        <input type="file" id="archivo" name="archivo" accept="image/*, .pdf">
+                        <small>Formatos: JPG, PNG, PDF (Máx. 5MB)</small>
+                    </div>
+                </div>
+
+                <div class="grupo-input full-width">
+                    <label for="mensaje">Tu Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos tu experiencia..." required></textarea>
+                </div>
+
+                <div class="grupo-input full-width checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter">
+                        Quiero recibir las mejores recetas peruanas en mi correo.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>&copy; 2025 Sabor Criollo</p>
+        <p>Síguenos en:
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">TikTok</a>
+        </p>
+    </footer>
+
+</body>
+</html>

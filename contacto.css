@@ -1,0 +1,126 @@
+/* Estilos Generales para la sección de Contacto */
+.contacto {
+    padding: 60px 20px;
+    background-color: #f9f5f0; /* Un tono crema suave */
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor-contacto {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+}
+
+.contacto h2 {
+    text-align: center;
+    color: #d32f2f; /* Rojo intenso tipo rocoto */
+    margin-bottom: 10px;
+}
+
+.intro-contacto {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Diseño del Formulario (Grid) */
+.formulario-criollo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 20px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hace que el mensaje y el checkbox ocupen todo el ancho */
+.full-width {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #d32f2f; /* Borde rojo al escribir */
+    outline: none;
+}
+
+/* Estilo especial para el input de archivo */
+.input-archivo-wrapper {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px dashed #ccc;
+}
+
+.input-archivo-wrapper small {
+    display: block;
+    color: #888;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+/* Checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botón */
+.btn-enviar {
+    grid-column: 1 / -1; /* Ancho completo */
+    padding: 15px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #b71c1c;
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+/* RESPONSIVE: Ajustes para celular */
+@media (max-width: 768px) {
+    .formulario-criollo {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+    
+    .contenedor-contacto {
+        padding: 20px;
+    }
+}
