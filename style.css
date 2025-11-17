@@ -1,7 +1,3 @@
-/* =====================================================
-   ESTILOS GLOBALES - PÁGINA PRINCIPAL (index.html)
-   ===================================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +11,7 @@ body {
     background-color: #fffaf5;
 }
 
-/* ===== HEADER ===== */
+
 header {
     background-color: #d32f2f;
     color: white;
@@ -53,7 +49,7 @@ header {
     margin: 0;
 }
 
-/* ===== MENÚ ===== */
+
 nav {
     background-color: #b71c1c;
     display: flex;
@@ -87,7 +83,7 @@ nav a:hover, nav a.activo {
     color: #ffe082;
 }
 
-/* ===== CARRUSEL ===== */
+
 #carrusel {
     display: flex;
     overflow-x: auto;
@@ -104,7 +100,7 @@ nav a:hover, nav a.activo {
     scroll-snap-align: center;
 }
 
-/* ===== INTRODUCCIÓN ===== */
+
 #introduccion {
     text-align: center;
     padding: 2rem;
@@ -115,7 +111,7 @@ nav a:hover, nav a.activo {
     margin-bottom: 1rem;
 }
 
-/* ===== CONTENIDO PRINCIPAL (index.html) ===== */
+
 main {
     display: flex;
     justify-content: space-between;
@@ -227,9 +223,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* =====================================================
-   ESTILOS ESPECÍFICOS - PÁGINA DE RECETAS (recetas.html)
-   ===================================================== */
+
 
 .page-recetas main {
     display: grid;
@@ -299,9 +293,7 @@ footer a:hover {
     background-color: #9a0007;
 }
 
-/* =====================================================
-   RESPONSIVE DESIGN
-   ===================================================== */
+
 
 @media screen and (max-width: 768px) {
     nav ul {
@@ -330,9 +322,6 @@ footer a:hover {
     }
 }
 
-/* =====================================================
-   ESTILOS - RECETA DETALLE (receta-ceviche.html)
-   ===================================================== */
 
 .receta-detalle {
     padding: 2rem;
@@ -448,9 +437,6 @@ footer a:hover {
     background-color: #9a0007;
 }
 
-/* =====================================================
-   GALERÍA CON DESCRIPCIÓN INTERACTIVA
-   ===================================================== */
 
 .carrusel {
     display: flex;
@@ -473,7 +459,7 @@ footer a:hover {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Texto que aparece al pasar el cursor */
+
 .descripcion-imagen {
     position: absolute;
     bottom: 0;
@@ -498,9 +484,7 @@ footer a:hover {
     filter: brightness(0.9);
 }
 
-/* =====================================================
-   VIDEO DE YOUTUBE RESPONSIVO
-   ===================================================== */
+
 
 .video-responsive {
     position: relative;
@@ -521,11 +505,7 @@ footer a:hover {
     border: none;
 }
 
-/* =====================================================
-   DETALLES DE PRESENTACIÓN EXTRA
-   ===================================================== */
 
-/* Sombra suave al pasar por la tarjeta principal */
 .receta-hero:hover .receta-img-principal {
     transform: scale(1.02);
     transition: transform 0.3s ease;
@@ -539,7 +519,7 @@ footer a:hover {
     margin-bottom: 1rem;
 }
 
-/* Mejora el botón "Volver a Recetas" */
+
 .btn-volver {
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     font-size: 1rem;
