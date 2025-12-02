@@ -1,7 +1,6 @@
-/* Estilos Generales para la sección de Contacto */
 .contacto {
     padding: 60px 20px;
-    background-color: #f9f5f0; /* Un tono crema suave */
+    background-color: #f9f5f0; /*Un tono crema suave*/
     font-family: 'Poppins', sans-serif;
 }
 
@@ -11,12 +10,12 @@
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /*Sombra suave para profundidad*/
 }
 
 .contacto h2 {
     text-align: center;
-    color: #d32f2f; /* Rojo intenso tipo rocoto */
+    color: #d32f2f;
     margin-bottom: 10px;
 }
 
@@ -26,10 +25,10 @@
     margin-bottom: 30px;
 }
 
-/* Diseño del Formulario (Grid) */
+/*Diseño del Formulario (Grid)*/
 .formulario-criollo {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-columns: 1fr 1fr; /*Dos columnas*/
     gap: 20px;
 }
 
@@ -62,11 +61,11 @@ textarea {
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: #d32f2f; /* Borde rojo al escribir */
+    border-color: #d32f2f;
     outline: none;
 }
 
-/* Estilo especial para el input de archivo */
+/*Estilo especial para el input de archivo*/
 .input-archivo-wrapper {
     background: #f4f4f4;
     padding: 10px;
@@ -81,7 +80,7 @@ input:focus, select:focus, textarea:focus {
     font-size: 0.8rem;
 }
 
-/* Checkbox */
+/*Checkbox*/
 .checkbox-container {
     display: flex;
     align-items: center;
@@ -95,9 +94,9 @@ input:focus, select:focus, textarea:focus {
     gap: 10px;
 }
 
-/* Botón */
+/*Botón*/
 .btn-enviar {
-    grid-column: 1 / -1; /* Ancho completo */
+    grid-column: 1 / -1; /*Ancho completo*/
     padding: 15px;
     background-color: #d32f2f;
     color: white;
@@ -111,16 +110,26 @@ input:focus, select:focus, textarea:focus {
 
 .btn-enviar:hover {
     background-color: #b71c1c;
-    transform: translateY(-2px); /* Pequeño efecto de elevación */
+    transform: translateY(-2px); /*Pequeño efecto de elevación*/
 }
 
-/* RESPONSIVE: Ajustes para celular */
+/*RESPONSIVE: Ajustes para celular */
 @media (max-width: 768px) {
     .formulario-criollo {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        grid-template-columns: 1fr; /*Una sola columna en móviles*/
     }
     
     .contenedor-contacto {
         padding: 20px;
     }
+}
+
+#mensaje-feedback {
+    grid-column: 1 / -1; 
+    max-width: 400px; 
+    margin: 15px auto; 
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
